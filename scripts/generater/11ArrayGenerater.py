@@ -16,7 +16,7 @@ def get_seq_from_meta(schema, table):
         else:
             nullable = "nullable "
         res = res + "  " + column + ":" + nullable + "string[max=255];\n"
-    return item["des"]
+    return res
 
 
 def generate(src, tgt):
@@ -24,5 +24,5 @@ def generate(src, tgt):
 
 
 if __name__ == '__main__':
-    list = get_seq_from_meta('SRC', 'PATIENT_ARRAY')
+    list = get_seq_from_meta('SRC', 'NAME_MASTER')
     print(list)
